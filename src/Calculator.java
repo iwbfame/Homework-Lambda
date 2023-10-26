@@ -7,13 +7,7 @@ public class Calculator {
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
 
-    BinaryOperator<Integer> devide = (x, y) -> {
-        if (y != 0) {
-            return x / y;
-        } else {
-            throw new ArithmeticException("Деление на ноль!");
-        }
-    };
+    BinaryOperator<Integer> devide = (x, y) -> (y == 0) ? 0 : (x/y);
 
     BinaryOperator<Integer> devide = (x, y) -> x / y;
 
